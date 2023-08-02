@@ -1,6 +1,6 @@
 # Manage Excel Files 
 
-This project is mainly focuses on how to manage the excel file using [React] (https://legacy.reactjs.org/), [NodeJs](https://nodejs.org/en), and [MySql](https://www.mysql.com/).
+This project is mainly focuses on how to manage the excel file using [React](https://legacy.reactjs.org/), [NodeJs](https://nodejs.org/en), and [MySql](https://www.mysql.com/).
 
 ## Available Scripts
 
