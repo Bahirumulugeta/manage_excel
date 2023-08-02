@@ -1,6 +1,6 @@
 // Request handler
 import { RequestHandler } from "express";
-// Dto 
+// Dto
 import { ICreateData } from "./dto";
 // Class
 import DataClass from "./dal";
@@ -36,9 +36,7 @@ export const getAllDatas: RequestHandler = async (req, res, next) => {
     // Response
     res.status(200).json({
       status: "Success",
-      data: {
-        datas,
-      },
+      data: datas,
     });
   } catch (error) {
     next(error);
@@ -73,10 +71,10 @@ export const deleteData: RequestHandler = async (req, res, next) => {
     // Delete data if the row exists
     await DataClass.deleteData(req.params.id);
     // Response
-      res.status(200).json({
-        status: "Success",
-        message:"Deleted successfully",
-      });
+    res.status(200).json({
+      status: "Success",
+      message: "Deleted successfully",
+    });
   } catch (error) {
     next(error);
   }
