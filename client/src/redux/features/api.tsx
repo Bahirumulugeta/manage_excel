@@ -22,7 +22,6 @@ export const addExcelDataApi = async (dispatch: Dispatch, data: any) => {
   try {
     const response = await axios.post(`${baseUrl}/`, data);
     dispatch(addExcelDataSuccess(response.data));
-    dispatch(fetchExcelDataSuccess(response.data));
   } catch (error: any) {
     dispatch(addExcelDataFailure(error.response));
   }
@@ -44,7 +43,6 @@ export const deleteExcelDataApi = async (dispatch: Dispatch, id: number) => {
   try {
     const response = await axios.delete(`${baseUrl}/${id}`);
     dispatch(deleteExcelDataSuccess(response.data));
-    dispatch(fetchExcelDataSuccess(response.data));
 
   } catch (error: any) {
     dispatch(deleteExcelDataFailure(error?.response.data));
@@ -60,8 +58,6 @@ export const updateExcelDataApi = async (
   try {
     const response = await axios.put(`${baseUrl}/${id}`, item);
     dispatch(updateExcelDataSuccess(response.data));
-    dispatch(fetchExcelDataSuccess(response.data));
-
   } catch (error: any) {
     dispatch(updateExcelDataFailure(error?.response.data));
   }
